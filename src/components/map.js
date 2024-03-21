@@ -14,7 +14,7 @@ const styleDeConteneur = {
     borderRadius: '20px',
 };
 
-const styleDeCarteSombre = [
+export const styleDeCarteSombre = [
     {
         elementType: 'geometry',
         stylers: [{ color: '#1e1e1e' }]
@@ -154,8 +154,34 @@ function Carte() {
         obtenirLocalisation();
     }, []);
 
+// Fonction pour rendre le formulaire de coordonnées
     const rendreFormulaireCoordonnees = () => {
-        // Votre fonction ici
+        return (
+            <div className={'ContainerInfoSignalisation'}>
+                <div className={'bloc'}>
+                    <p>Latitude:</p>
+                    <input type="text" value={position?.lat} readOnly/>
+                    <p>Longitude:</p>
+                    <input type="text" value={position?.lng} readOnly/>
+                </div>
+
+                <div className={'bloc'}>
+                    <select value={motSelectionne} onChange={handleChangeSelect}>
+                        <option value="">Sélectionner un Danger</option>
+                        <option value="Homicide">Homicide</option>
+                        <option value="Rape">Rape</option>
+                        <option value="Robbery">Robbery</option>
+                        <option value="Vol">Vol</option>
+                        <option value="Agression">Agression</option>
+                        <option value="PersonneSuspect">Personne Suspect</option>
+                    </select>
+                    <p>Le Danger sélectionné est : {motSelectionne}</p>
+                </div>
+
+                <button className={'BoutonSignalisation'}>Envoyer à la DB & Afficher Sur la Carte</button>
+
+            </div>
+        );
     };
 
     const refreshLocation = () => {
