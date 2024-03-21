@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gudea:ital,wght@0,400;0,700;1,400&display=swap');
+
+.resultatsearch_container {
+    width: 25vw;
+    height: 93.5vh;
+
+    margin: 0 1vw 0 1vw;
+    padding: 1%;
+
+
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 170%;
+    color: #51bce7;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap');
+
+.ContainerSignalisation {
+    position: absolute;
+    top: 8%;
+    left: 1.5%;
+}
+
+.ContainerInfoSignalisation {
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fdfdfd;
+
+    padding: 2%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+
+    font-family: "Gudea", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.BoutonSignalisation {
+    background-color: #fdfdfd;
+
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 5%;
+    font-weight: 400;
+}
+
+.bloc {
+    margin-bottom: 15%;
+}

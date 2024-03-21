@@ -1,0 +1,27 @@
+.menu_container {
+    display: flex;
+    flex-direction: column;
+
+    width: 20vw;
+    height: 97.5vh;
+}
+
+button {
+    display: inline-block;
+    padding: 5px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 16vw;
+    color: #333;
+    text-align: left;
+}
+
+.menu_bt1 {
+    margin-bottom: 3vh;
+}
+
+.menu_bt2 {
+    margin-bottom: 1vh;
+}
+
