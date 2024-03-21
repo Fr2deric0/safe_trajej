@@ -24,14 +24,21 @@
 }
 
 .BoutonSignalisation {
-    background-color: #fdfdfd;
+    background-color: #af0000;
+    color: #cccccc;
 
-    border: 1px solid;
+    margin-top: 3%;
+    border: 0px solid;
     border-radius: 2px;
-    padding: 5%;
+    padding: 7%;
     font-weight: 400;
 }
 
-.bloc {
-    margin-bottom: 15%;
+.BoutonGéolocalisation {
+    background-color: #fdfdfd;
+
+    border: 0px solid;
+    border-radius: 2px;
+    padding: 5%;
+    font-weight: 400;
 }

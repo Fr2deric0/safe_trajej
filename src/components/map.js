@@ -8,7 +8,7 @@ const options = {
     maximumAge: 0
 };
 
-const styleDeConteneur = {
+export const styleDeConteneur = {
     width: '75vw',
     height: '98vh',
     borderRadius: '20px',
@@ -90,7 +90,7 @@ export const styleDeCarteSombre = [
     {
         featureType: 'water',
         elementType: 'geometry',
-        stylers: [{ color: '#51bce7' }]
+        stylers: [{ color: '#1e5cad' }]
     },
     {
         featureType: 'water',
@@ -114,12 +114,10 @@ function Carte() {
     const [marqueurs, setMarqueurs] = useState([]);
     const [modeMarqueurUnique, setModeMarqueurUnique] = useState(false);
     const [afficherCoordonnees, setAfficherCoordonnees] = useState(false);
-
+    const [motSelectionne, setMotSelectionne] = useState('');
     const handleChangeSelect = (evenement) => {
         setMotSelectionne(evenement.target.value);
     };
-
-    const [motSelectionne, setMotSelectionne] = useState('');
 
     const gererClicCarte = useCallback((evenement) => {
         if (modeMarqueurUnique) {
@@ -204,7 +202,7 @@ function Carte() {
             </GoogleMap>
             <div className={'ContainerSignalisation'}>
                 <div>
-                    <button onClick={refreshLocation}>Actualiser la géolocalisation</button>
+                    <button className={'BoutonGéolocalisation'} onClick={refreshLocation}>Actualiser la géolocalisation</button>
                     <button className={'BoutonSignalisation'}
                             onClick={() => setAfficherCoordonnees(!afficherCoordonnees)}>
                         {afficherCoordonnees ? 'Cacher' : 'Signaler'}
