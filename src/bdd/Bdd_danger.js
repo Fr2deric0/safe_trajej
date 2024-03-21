@@ -1,9 +1,5 @@
 const { MongoClient } = require('mongodb');
 const Danger = require("./Danger");
-const Bdd_client = require("./Bdd_client");
-const Client = require("./Client"); // Include if necessary
-const mangoose = require("mongoose");
-
 
 class Bdd_danger {
     constructor() {
