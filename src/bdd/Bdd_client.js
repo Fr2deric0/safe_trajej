@@ -4,9 +4,6 @@ const bcrypt = require('bcrypt');
 
 class Bdd_client {
     constructor() {
-        //this.client = new mongodb.MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-        
-        //this.client = new MongoClient('mongodb://localhost:27017');
         this.uri = "mongodb://localhost:27017/";
         this.client = new MongoClient(this.uri);
     }
@@ -35,6 +32,7 @@ class Bdd_client {
     async connect() {
         await this.client.connect();
         this.db = this.client.db('safe_trajej');
+
         if (!this.db) {
             throw new Error("db not found");
         }
@@ -61,11 +59,7 @@ class Bdd_client {
 
     async test_client_is_exist(email) {
         const is_exist = await this.collection.findOne({email: email});
-        if (is_exist) {
-            return true;
-        } else {
-            return false;
-        }
+        return is_exist;
     }
 
      async get_client_from_username(username) {
